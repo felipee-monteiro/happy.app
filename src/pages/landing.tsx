@@ -28,16 +28,19 @@ return (
     <>
         <div id="page-landing">  
             <div className="content-wrapper">
-                <img src={logoImg} alt="wrapper" />
-
+                
                 <main>
          	       <h1>Leve Felicidade para o Mundo !</h1>
          	       <p>Visite um orfanato e mude o dia de muitas crianças.</p>
                 </main>
 
                 <div className="location">
-                    <strong key={city.ip}>{city.city}</strong>
-                    <span>{city.region}</span>
+                    <img src={logoImg} alt="wrapper" />
+                    
+                       <div className="debug">
+                          <strong key={city.ip}>{city.city},  </strong>
+                          <span>{city.region}</span>
+                       </div>
                 </div>
 
 
