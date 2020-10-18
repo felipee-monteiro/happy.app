@@ -221,6 +221,7 @@ form.create-orphanage-form button.confirm-button:hover {
    }
 
   #page-create-orphanage aside{
+    /*position: initial;*/
      flex-direction: initial;
      justify-content: space-between;
      display: flex;
@@ -235,14 +236,28 @@ form.create-orphanage-form button.confirm-button:hover {
   }
 
   form.create-orphanage-form {
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/
     width: 100%;
     height: auto;
     font-size: 1.5rem;
-    margin: 0 auto;
+    /*margin: 5rem auto;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   form.create-orphanage-form fieldset legend {
       font-size: 2.8rem;
+      margin-top: 1rem;
+  }
+
+  form.create-orphanage-form fieldset{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
   }
 
   form.create-orphanage-form button.confirm-button {
