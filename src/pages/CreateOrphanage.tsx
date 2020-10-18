@@ -37,7 +37,7 @@ export default function CreateOrphanage() {
   useEffect(() => {
 
      getAtualPosition(setPosition, position.latitude, position.longitude);
-  });
+  }, [position.latitude, position.longitude]);
 
   function handlerSubmit(event: FormEvent){
 

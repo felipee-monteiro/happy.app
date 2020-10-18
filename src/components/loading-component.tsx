@@ -1,5 +1,5 @@
 import React from 'react';
-import { RingSpinner, GridSpinner, WaveSpinner, RainbowSpinner } from 'react-spinners-kit';
+import { RingSpinner } from 'react-spinners-kit';
 import '../styles/components/spinner.css';
 
 
