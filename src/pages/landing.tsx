@@ -24,8 +24,6 @@ useEffect(() => {
 
 
 return (
-
-    <>
         <div id="page-landing">  
             <div className="content-wrapper">
                 
@@ -44,12 +42,11 @@ return (
                 </div>
 
 
-
-                <Link to="/app" className="enter-app"><FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)"/></Link>
+                <div className="link">
+                   <Link to="/app" className="enter-app"><FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)"/></Link>
+                </div>
             </div>
         </div>
-
-    </>
 	);
 };
 

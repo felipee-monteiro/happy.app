@@ -96,10 +96,17 @@
 	transition: 0.2s;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
 	body, html{
 		font-size: 55%;
 	}
+
+	#page-landing .content-wrapper main h1{
+		width: auto;
+		font-size: 2rem;
+        line-height: 0rem;
+        margin-top: 10rem;
+    }
 }
 
 
@@ -111,35 +118,40 @@
 	}
 	#page-landing{
 		/*position: absolute;*/
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
+		/*max-height: 100vh;*/
+		/*border: 2px solid red;*/
 	}
 	#page-landing .content-wrapper{
-		position: absolute;
+		/*position: absolute;*/
 		width: 100%;
 		max-width: 100vw;
 		height: 100%;
-		max-height: 100vh;
+		/*max-height: 100vh;*/
 		padding: 2.5rem 0.5rem;
-		background: rgba(0, 0, 0, 0);
-		/*border: 3px solid red;*/
+		background: linear-gradient(329.54deg, #298601 0%, #00C7C7 100%);
+		/*border: 3px solid pink;*/
+		margin: 0;
 	}
 
     #page-landing .content-wrapper main{
-    	position: relative;
+    	/*position: relative;*/
     	width: 100%;
     	max-width: 100vw;
-    	height: 100%;
-    	max-height: 100vh;
+    	height: auto;
+    	/*max-height: 100vh;*/
     	display: flex;
     	flex-direction: column;
+    	margin-top: 14rem;
+    	margin: 0;
     	/*border: 2px solid black;*/
     }
 	#page-landing .content-wrapper main h1{
 		width: auto;
 		font-size: 5rem;
         line-height: 5rem;
-        margin-top: 18rem;
+        margin-top: 15rem;
     }
 
     #page-landing .content-wrapper main h1, p, img{
@@ -149,23 +161,32 @@
     #page-landing .content-wrapper main p{
     	line-height: initial;
     	font-size: 1.5rem;
-    	margin-top: 4rem;
+    	margin-top: 2rem;
     }
 
-    #page-landing .content-wrapper img{
-    	height: 6rem;
+    #page-landing .content-wrapper .location img{
+    	height: 5.5rem;
     	/*position: relative;*/
         margin-right: 1rem;
+        margin-top: 0.9rem;
         /*border: 3px solid red;*/
     }
 
-    #page-landing .content-wrapper .enter-app{
-    	position: relative;
-    	width: 8rem;
-    	height: 12rem;
+    #page-landing .content-wrapper .link{
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	padding: 1rem;
+    	/*border: 3px solid orange;*/
+        margin: 9rem 0;
+    }
 
-	    margin-top: 8.3rem;
-	    margin-left: 3rem;
+    #page-landing .content-wrapper .link .enter-app{
+    	/*position: relative;*/
+    	width: 10rem;
+    	height: 10rem;
+
+    	margin-right: 1rem;
     }
 
  
@@ -184,11 +205,13 @@
     	display: flex;
     	flex-direction: column;
     	/*border: 4px solid red;*/
+    	font-size: 2rem;
+    	margin-top: 0.8rem;
+    	margin-right: 0.8rem;
     }
 
     #page-landing .content-wrapper .location .debug strong{
     	line-height: initial;
     	margin-top: 1rem;
-    	margin-right: 0;
     }
 }
