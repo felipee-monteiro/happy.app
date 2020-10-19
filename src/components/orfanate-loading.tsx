@@ -8,7 +8,7 @@ export default function Loading(){
     <>
       <div className="spinner">
           <RingSpinner size={70} color={"#00ff89"} loading={true} />
-          <h1>Por favor, Ative O GPS :)</h1>
+          <h1>Carregando...</h1>
       </div>
     </>
   );

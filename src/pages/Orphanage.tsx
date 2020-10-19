@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom';
 import mapIcon from '../utils/mapIcon';
 import api from '../services/api';
 import '../styles/pages/orphanage.css';
-import { Facebook } from 'react-content-loader';
+import Loading from '../components/orfanate-loading';
 
 import Sidebar from '../components/sidebar';
 
@@ -46,8 +46,7 @@ export default function Orphanage() {
   if(!orfanate){
      return (
          <>
-           <Sidebar />
-           <Facebook />
+           <Loading />
          </>
      );
   }
