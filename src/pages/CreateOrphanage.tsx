@@ -8,8 +8,7 @@ import '../styles/pages/create-orphanage.css';
 
 import Sidebar from '../components/sidebar';
 import mapIcon from '../utils/mapIcon';
-// import API from '../services/location';
-import getAtualPosition from '../services/getAtualLocation';
+// import Loading from '../components/location-loading';
 import api from '../services/api';
 
 
@@ -18,6 +17,7 @@ export default function CreateOrphanage() {
  
   const history = useHistory();
   const [position, setPosition] = useState({latitude: 0, longitude: 0});
+  const [usePosition, setUsePosition] = useState({lat: 0, long: 0});
 
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
@@ -27,6 +27,17 @@ export default function CreateOrphanage() {
   const [images, setImages] = useState<File[]>([]);
   const [imagePreview, setImagePreview] = useState(['']);
 
+
+  useEffect(() => {
+
+      if (navigator) {
+          navigator.geolocation.getCurrentPosition(position => {
+            setUsePosition({lat: position.coords.latitude, long: position.coords.longitude});
+          });
+      };
+
+  });
+
   function handlerMapClick(event: LeafletMouseEvent){
      const {lat, lng} = event.latlng;
 
@@ -34,10 +45,6 @@ export default function CreateOrphanage() {
      setPosition({ latitude: lat, longitude: lng});
   }
 
-  useEffect(() => {
-
-     getAtualPosition(setPosition, position.latitude, position.longitude);
-  }, [position.latitude, position.longitude]);
 
   function handlerSubmit(event: FormEvent){
 
@@ -60,7 +67,7 @@ export default function CreateOrphanage() {
 
 
     api.post('create-orfanate', data).then(response => {
-        console.log(response)
+       
     });
 
     history.push('/app');
@@ -96,16 +103,17 @@ export default function CreateOrphanage() {
             <legend>Dados</legend>
 
             <Map 
-              center={[position.latitude, position.longitude]} 
+              center={[usePosition.lat, usePosition.long]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
               onClick={handlerMapClick}
+
             >
               <TileLayer 
                 url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZmVsaXBlMDA3IiwiYSI6ImNrZ2NoanNxZDAxc2kyc24zbm5reWZwZ28ifQ.gEtY3Amg3DsTd5Hp6E_-sA`}
               />
 
-              { position.latitude !== 0 && <Marker interactive={true} icon={mapIcon} position={[position.latitude, position.longitude]} />}
+              { position.latitude !== 0 && <Marker interactive={false} icon={mapIcon} position={[position.latitude, position.longitude]} />}
 
  
             </Map>
@@ -152,7 +160,7 @@ export default function CreateOrphanage() {
             </div>
 
             <div className="input-block">
-              <label htmlFor="opening_hours">Nome</label>
+              <label htmlFor="opening_hours">Horário</label>
               <input id="opening_hours" value={open_hour} onChange={event => setOpenHour(event.target.value)} />
             </div>
 

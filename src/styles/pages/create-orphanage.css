@@ -88,6 +88,7 @@ form.create-orphanage-form .input-block label {
   display: flex;
   color: #8FA7B3;
   margin-bottom: 8px;
+  margin-top: 20px;
   line-height: 24px;
 }
 
@@ -215,9 +216,14 @@ form.create-orphanage-form button.confirm-button:hover {
      font-size: 60%;
   }
 
+  main{
+    width: 100vw;
+  }
+
    #page-create-orphanage{
      display: flex;
      flex-direction: column;
+     width: 100vw;
    }
 
   #page-create-orphanage aside{
@@ -232,17 +238,16 @@ form.create-orphanage-form button.confirm-button:hover {
   }
 
   .leaflet-container{
+    width: 100vw;
     z-index: initial;
+    /*border: 3px solid red;*/
   }
 
   form.create-orphanage-form {
     display: flex;
-    /*justify-content: center;*/
-    /*align-items: center;*/
     width: 100%;
     height: auto;
     font-size: 1.5rem;
-    /*margin: 5rem auto;*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -253,8 +258,9 @@ form.create-orphanage-form button.confirm-button:hover {
       margin-top: 1rem;
   }
 
-  form.create-orphanage-form fieldset{
+  form.create-orphanage-form fieldset + fieldset{
       display: flex;
+      width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
