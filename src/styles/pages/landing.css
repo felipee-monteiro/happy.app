@@ -1,0 +1,178 @@
+#page-landing {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: linear-gradient(329.54deg, #298601 0%, #00C7C7 100%);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#page-landing .content-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 2rem;
+	width: 93rem;
+
+	background: url('../../images/Ilustra02.svg') no-repeat 80% center;
+}
+
+#page-landing .content-wrapper main {
+	width: 100%;
+	max-width: 350px;
+	margin-top: 6rem;
+}
+
+#page-landing .content-wrapper main h1 {
+	font-size: 76px;
+	font-weight: 900;
+	line-height: 70px;
+}
+
+#page-landing .content-wrapper main p {
+
+	margin-top: 40px;
+	font-size: 24px;
+	line-height: 34px;
+
+}
+
+#page-landing .content-wrapper .location {
+	position: absolute;
+	left: 2rem;
+	top: 0;
+
+	font-size: 24px;
+	line-height: 34px;
+
+	display: flex;
+	flex-direction: column;
+
+	text-align: right;
+}
+
+#page-landing .content-wrapper .location .debug {
+	margin-top: 0.4rem;
+
+}
+
+.content-wrapper .location strong {
+	font-weight: 800;
+	margin-right: 0.1rem;
+}
+
+#page-landing .content-wrapper .enter-app {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	width: 80px;
+	height: 80px;
+
+	background: #ffd666;
+	border-radius: 26px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: background 0.2s;
+}
+
+#page-landing .content-wrapper .enter-app:hover {
+	background-color: #96feff;
+	transition: 0.2s;
+}
+
+@media screen and (max-width: 450px) {
+	body, html {
+		font-size: 55%;
+	}
+
+	#page-landing .content-wrapper main h1 {
+		font-size: 2rem;
+		line-height: 0rem;
+		margin-top: 10rem;
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	body, html {
+		font-size: 60%;
+	}
+
+	#page-landing .content-wrapper {
+		width: 100vw;
+		height: 100%;
+		padding: 2.5rem 0.5rem;
+		background: linear-gradient(329.54deg, #298601 0%, #00C7C7 100%);
+		margin: 0 auto;
+	}
+
+	#page-landing .content-wrapper main {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: auto 0;
+	}
+
+	#page-landing .content-wrapper main h1 {
+		font-size: 5rem;
+		line-height: 5rem;
+		margin-top: 15rem;
+	}
+
+	#page-landing .content-wrapper main h1, p, img {
+		margin-left: 1.5rem;
+	}
+
+	#page-landing .content-wrapper main p {
+		line-height: initial;
+		font-size: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	#page-landing .content-wrapper .location img {
+		height: 5.5rem;
+		margin-right: 1rem;
+		margin-top: 0.9rem;
+	}
+
+	#page-landing .content-wrapper .link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+		margin: 9rem 0;
+	}
+
+	#page-landing .content-wrapper .link .enter-app {
+		width: 10rem;
+		height: 10rem;
+		margin-right: 1rem;
+	}
+
+	#page-landing .content-wrapper .location {
+		display: flex;
+		flex-direction: initial;
+		justify-content: space-between;
+		width: 100%;
+		padding: 1.5rem 0.4rem;
+		margin-right: 1rem;
+	}
+
+	#page-landing .content-wrapper .location .debug {
+		display: flex;
+		flex-direction: column;
+		font-size: 2rem;
+		margin: 1rem 3rem;
+	}
+
+	#page-landing .content-wrapper .location .debug strong {
+		line-height: initial;
+		margin-top: 1rem;
+	}
+}

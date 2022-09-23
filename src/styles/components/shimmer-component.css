@@ -1,0 +1,23 @@
+.container {
+	border: 0px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    padding: 16px;
+    width: 200px;
+}
+
+.circle{	
+	height: 56px;
+    width: 56px;
+    border-radius: 50%;
+}
+
+.line{
+	width: 96px;
+    height: 8px;
+    align-self: center;
+    margin-left: 16px;
+    border-radius: 8px;
+}

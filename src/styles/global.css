@@ -1,0 +1,18 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	color: #fafafa;
+	background: #ebf2f5;
+	font-family: 'Nunito';
+	width: 100vw;
+	height: 100vh;
+}
+
+body, input, textarea, button{
+	font: 600 18px Nunito;
+}
+
