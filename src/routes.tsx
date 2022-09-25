@@ -1,25 +1,33 @@
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
-import React from 'react';
-import Landing from './pages/landing';
-import OrfanateMap from './pages/orfanates';
-import Orphanage from './pages/Orphanage';
-import CreateOrphanage from './pages/CreateOrphanage';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
+import React from 'react'
+import Landing from './pages/landing'
+import OrfanateMap from './pages/orfanates'
+import Orphanage from './pages/Orphanage'
+import CreateOrphanage from './pages/CreateOrphanage'
 
-import 'leaflet/dist/leaflet.css';
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Landing />
+  },
+  {
+    path: '/app',
+    element: <OrfanateMap />
+  },
+  {
+    path: '/orphanages/create',
+    element: <CreateOrphanage />
+  },
+  {
+    path: '/orphanages/:id',
+    element: <Orphanage />
+  }
+]);
 
+function Routes (props: any) {
+  return (
+    <RouterProvider router={router} />
+  )
+}
 
-function Routes() {
-    return (
-         <BrowserRouter>
-            <Switch>
-              <Route path="/" exact component={Landing}/>
-              <Route path="/app" component={OrfanateMap} />
-
-              <Route path="/orphanages/create" component={CreateOrphanage} />              
-              <Route path="/orphanages/:id" component={Orphanage} />
-            </Switch>
-         </BrowserRouter>
-    );
-};
-
-export default Routes;
+export default Routes

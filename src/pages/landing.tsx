@@ -3,19 +3,13 @@ import '../styles/pages/landing.css'
 import logoImg from '../images/logo.svg'
 import { FiArrowRight } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-import API from '../services/location'
+import api from '../services/api'
 
 function Landing () {
-  const [city, setCity] = useState({ city: String, ip: 0, region: String })
+  const [city, setCity] = useState<any>({ city: '', ip: 0, region: '' })
 
   useEffect(() => {
-    API.get('https://ipinfo.io?token=0c52537c77a301').then(response => {
-      setCity({
-        city: response.data.city,
-        ip: response.data.ip,
-        region: response.data.region
-      })
-    })
+    api('https://ipinfo.io').get('?token=0c52537c77a301').then()
   }, [])
 
   return (
