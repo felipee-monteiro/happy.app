@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 import api from '../services/api'
 
 function Landing () {
-  const [city, setCity] = useState<any>({ city: '', ip: 0, region: '' })
+  const [city, setCity] = useState<any>({ city: '', region: '' })
 
   useEffect(() => {
-    api('https://ipinfo.io').get('?token=0c52537c77a301').then()
+    api('https://ipinfo.io').get('?token=0c52537c77a301').then(({data}): void => setCity({city: data.city, region: data.region}))
   }, [])
 
   return (
